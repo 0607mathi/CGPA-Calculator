@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- link icon for tittle -->
+      <link rel="icon" href="/img-files/foot-logo-mec.png">
+      <title>Mec-CGPA Calculator</title>
+      <!-- link bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="./css-files/style.css">
+      <!-- font family -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap" rel="stylesheet">
+      <!-- icon cdn font awsome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+   <body>
+      <!-- college name and logo -->
+      <div class="container-fluid">
+         <div class="row align-items-center justify-content-center headpart">
+            <div class=" p-2 col-sm-2 col-md-2 col-lg-1 icon"> <img src="/img-files/foot-logo-mec.png" alt="mec logo"> </div>
+            <div class="col-sm-10 col-md-10 col-xl-7 col-xxl-6 pt-1 name ">
+               <h2>Muthayammal Engineering college</h2>
+               <p>(Approved by AICTE, New Delhi, Accredited by NBA And NAAC & Affiliated to Anna University)</p>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- end -->
+      <!-- semester details  -->
+      <div class="container  mt-3 pb-4 pt-2">
+         <div class="row justify-content-center mb-2 mt-3">
+            <div class="col-3 col-sm-3 col-md-2 col-lg-2 col-xxl-1 txt">Department</div>
+            <div class="col-4">
+               <select name="" id="Department" required>
+                  <option value="">choose department</option>
+                  <option value="IT">Information Technology</option>
+                  <option value="CSE">Computer Science Engineering</option>
+                  <option value="AIDS">Artificial Intelligence and Data Science</option>
+                  <option value="CY">Cyber Security</option>
+                  <option value="BM">Biomedical Engineering</option>
+                  <option value="EEE">Electrical and Electronics Engineering</option>
+                  <option value="ECE">Electronics and Communication Engineering</option>
+                  <option value="ME">Machanical Engineering</option>
+                  <option value="CIVIL">Civil Engineering</option>
+                  <option value="MEH">Mechatronics Engineering</option>
+                  <option value="MD">Medical Electronics</option>
+                  <option value="RA">Robotics and Automation Engineering</option>
+                  <option value="BT">Biotechnology</option>
+                  <option value="CH">Chemical Engineering</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-center mb-2">
+            <div class="col-3 col-sm-3 col-md-2 col-lg-2 col-xxl-1 txt">Semester</div>
+            <div class="col-4">
+               <select name="" id="Semester" required>
+                  <option value="">choose semester</option>
+                  <option value="Semester 1">Semester 1</option>
+                  <option value="Semester 2">Semester 2</option>
+                  <option value="Semester 3">Semester 3</option>
+                  <option value="Semester 4">Semester 4</option>
+                  <option value="Semester 5">Semester 5</option>
+                  <option value="Semester 6">Semester 6</option>
+                  <option value="Semester 7">Semester 7</option>
+                  <option value="Semester 8">Semester 8</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-center mb-2">
+            <div class="col-3 col-sm-3 col-md-2 col-lg-2 col-xxl-1 txt">Regulation</div>
+            <div class="col-4">
+               <select name="reg" id="Regulation" required>
+                  <option value="">choose regulation</option>
+                  <option value="2019">2019</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-center mt-3">
+            <div class="col-1"><button type="submit" onclick="return submit()"> Submit </button></div>
+         </div>
+      </div>
+      <!-- end -->
+      <!-- mark details -->
+      <div class="container  mt-3 mb-3 pt-2">
+         <div class="row justify-content-evenly mt-2 scg">
+            <div class="col-3">Subject</div>
+            <div class="col-3">Credits</div>
+            <div class="col-3">Grades</div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="sub1">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subcredits1" class="subcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subgrade1">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="sub2">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subcredits2" class="subcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subgrade2">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="sub3">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subcredits3" class="subcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subgrade3">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="sub4">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subcredits4" class="subcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subgrade4">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="sub5">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subcredits5" class="subcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subgrade5">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="sub6">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subcredits6" class="subcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="subgrade6">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="lab1">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="labcredits1" class="labcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="labgrade1">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="lab2">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="labcredits2" class="labcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="labgrade2">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-evenly mt-2">
+            <div class="col-3 col-md-3">
+               <select name="" id="lab3">
+                  <option value="">choose subject</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="labcredits3" class="labcredits">
+                  <option value="">choose credits</option>
+               </select>
+            </div>
+            <div class="col-3 col-md-3">
+               <select name="" id="labgrade3">
+                  <option value="0">choose grades</option>
+                  <option value="10">O</option>
+                  <option value="9">A+</option>
+                  <option value="8">A</option>
+                  <option value="7">B+</option>
+                  <option value="6">B</option>
+                  <option value="0">U</option>
+                  <option value="0">U+</option>
+               </select>
+            </div>
+         </div>
+         <div class="row justify-content-center mt-3 pb-3">
+            <div class="col-1"><button type="submit" onclick="gpa()"> <a href="#result"> Calculate </a> </button></div>
+         </div>
+      </div>
+      <!-- end -->
+      <!-- result -->
+      <div class="container  justify-content-center align-items-center mt-3 mb-3 pt-1" id="result" style="display: none;">
+         <div class="row">
+            <div class="col"style="display: flex; flex-direction:row; align-items: center; justify-content: center;">
+               <h5 id="score">Your SGPA Score Given Below.</h5>
+            </div>
+         </div>
+         <div class="row ">
+            <div class="col">
+               <h5>
+                  Congratulations you got a Good Score...! <br> 
+                  <div id="cgpa">----</div>
+               </h5>
+            </div>
+         </div>
+      </div>
+      <!-- end -->
+      <!-- contact details -->
+      <div class="container mb-2">
+         <div class="row pt-3" style="text-align: center;">
+            <i class="fa-solid fa-headset"></i>
+            <p>Contacts</p>
+         </div>
+         <div class="row p-2 justify-content-center">
+            <div class="col-4 col-sm-2">
+               <div class="icons" onclick="copyText()">
+                  <a href="https://mail.google.com">
+                     <i class="fa-regular fa-envelope"></i>
+                     <p> E-mail</p>
+                  </a>
+               </div>
+            </div>
+            <div class="col-4 col-sm-2">
+               <div class="icons">
+                  <a href="https://www.linkedin.com/in/mathiyarasu0607/">
+                     <i class="fa-brands fa-linkedin"></i>
+                     <p> Linkedin</p>
+                  </a>
+               </div>
+            </div>
+            <div class="col-4 col-sm-2">
+               <div class="icons">
+                  <a href="https://wa.me/918248477166">
+                     <i class="fa-brands fa-whatsapp"></i>
+                     <p>Whatsapp</p>
+                  </a>
+               </div>
+            </div>
+            <div class="col-4 col-sm-2">
+               <div class="icons">
+                  <a href="tel:+918248477166">
+                     <i class="fa-solid fa-phone"></i>
+                     <p> Phone</p>
+                  </a>
+               </div>
+            </div>
+            <div class="col-4 col-sm-2">
+               <div class="icons">
+                  <a href="https://instagram.com/0607_mathi?igshid=MzNlNGNkZWQ4Mg==">
+                     <i class="fa-brands fa-instagram"></i>
+                     <p> Instagram</p>
+                  </a>
+               </div>
+            </div>
+            <div class="col-4 col-sm-2">
+               <div class="icons">
+                  <a href="https://github.com/0607mathi">
+                     <i class="fa-brands fa-github"></i>
+                     <p> Github</p>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- JS bootstrap -->
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+         crossorigin="anonymous"
+         ></script>
+      <script src="/js-files/app.js"></script>
+   </body>
+</html>
